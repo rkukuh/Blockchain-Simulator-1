@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CryptoKit
 
 class Blockchain {
     private var blocks: [Block] = []
@@ -25,7 +26,8 @@ class Blockchain {
     }
     
     static func SHA256(_ input: String) -> String {
-        // Simplified SHA256 hashing for demonstration
-        return String(input.hashValue)
+        let inputData = Data(input.utf8)
+        let hashedData = CryptoKit.SHA256.hash(data: inputData)
+        return hashedData.compactMap { String(format: "%02x", $0) }.joined()
     }
 }
