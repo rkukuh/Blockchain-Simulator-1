@@ -11,8 +11,7 @@ class Block {
     var version: Int = 1
     let previousHash: String
     var merkleRoot: String {
-        // Simplified calculation of the Merkle root
-        return transactions.reduce("") { $0 + $1.hashValue.description }
+        return computeMerkleRoot(transactions: transactions)
     }
     var timestamp: Int {
         return Int(Date().timeIntervalSince1970)
@@ -29,5 +28,24 @@ class Block {
     init(transactions: [String], previousHash: String = "") {
         self.transactions = transactions
         self.previousHash = previousHash
+    }
+    
+    private func computeMerkleRoot(transactions: [String]) -> String {
+        var hashes = transactions.map { Blockchain.SHA256($0) }
+        
+        while hashes.count > 1 {
+            if hashes.count % 2 != 0 {
+                hashes.append(hashes.last!)
+            }
+            
+            var newLevel = [String]()
+            for i in stride(from: 0, to: hashes.count, by: 2) {
+                let combinedHash = hashes[i] + hashes[i + 1]
+                newLevel.append(Blockchain.SHA256(combinedHash))
+            }
+            hashes = newLevel
+        }
+        
+        return hashes.first ?? ""
     }
 }
