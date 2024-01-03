@@ -28,7 +28,7 @@ struct ContentView: View {
                     Text("Previous Hash: \(block.previousHash)")
                     Text("Nonce: \(block.nonce)")
                     Text("Version: \(block.version)")
-                    Text("Timestamp: \(block.timestamp)")
+                    Text("Timestamp: \(block.formattedTimestamp)")
                     Text("Difficulty Target: \(block.difficultyTarget)")
                     Text("Merkle Root: \(block.merkleRoot)")
                     

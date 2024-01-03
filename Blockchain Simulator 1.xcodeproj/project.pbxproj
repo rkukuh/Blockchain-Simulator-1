@@ -16,6 +16,7 @@
 		4A0B2D662B44F2D7004C5683 /* Blockchain_Simulator_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0B2D652B44F2D7004C5683 /* Blockchain_Simulator_1UITestsLaunchTests.swift */; };
 		4A0B2D732B44F31C004C5683 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0B2D722B44F31C004C5683 /* Block.swift */; };
 		4A0B2D752B44F350004C5683 /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0B2D742B44F350004C5683 /* Blockchain.swift */; };
+		4AB61BAB2B45065F00DA8B82 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB61BAA2B45065F00DA8B82 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4A0B2D652B44F2D7004C5683 /* Blockchain_Simulator_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain_Simulator_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4A0B2D722B44F31C004C5683 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		4A0B2D742B44F350004C5683 /* Blockchain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
+		4AB61BAA2B45065F00DA8B82 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				4A0B2D722B44F31C004C5683 /* Block.swift */,
 				4A0B2D742B44F350004C5683 /* Blockchain.swift */,
 				4A0B2D492B44F2D5004C5683 /* ContentView.swift */,
+				4AB61BAA2B45065F00DA8B82 /* Date+Extension.swift */,
 				4A0B2D4B2B44F2D7004C5683 /* Assets.xcassets */,
 				4A0B2D502B44F2D7004C5683 /* Blockchain_Simulator_1.entitlements */,
 				4A0B2D4D2B44F2D7004C5683 /* Preview Content */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AB61BAB2B45065F00DA8B82 /* Date+Extension.swift in Sources */,
 				4A0B2D732B44F31C004C5683 /* Block.swift in Sources */,
 				4A0B2D752B44F350004C5683 /* Blockchain.swift in Sources */,
 				4A0B2D4A2B44F2D5004C5683 /* ContentView.swift in Sources */,
