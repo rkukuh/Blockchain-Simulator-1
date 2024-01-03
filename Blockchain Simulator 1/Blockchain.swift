@@ -12,7 +12,6 @@ class Blockchain {
     private var blocks: [Block] = []
     
     init() {
-        // Initialize the blockchain with the Genesis block
         let genesisBlock = createGenesisBlock()
         blocks.append(genesisBlock)
     }
@@ -21,7 +20,6 @@ class Blockchain {
         return blocks.last
     }
     
-    // Computed property to provide access to the blocks
     var allBlocks: [Block] {
         return blocks
     }
@@ -32,10 +30,9 @@ class Blockchain {
     }
     
     private func createGenesisBlock() -> Block {
-        // Create a Genesis block with default or hardcoded values
+        // Create the Genesis block with a default transaction
         return Block(transactions: ["Genesis Block"], previousHash: "0000000000000000")
     }
-    
     
     static func SHA256(_ input: String) -> String {
         let inputData = Data(input.utf8)
