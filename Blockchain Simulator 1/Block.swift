@@ -25,7 +25,6 @@ class Block {
     var transactions: [String]
     
     var hash: String {
-        // SHA256 hashing function
         return Blockchain.SHA256("\(version)\(previousHash)\(merkleRoot)\(timestamp)\(difficultyTarget)\(nonce)")
     }
     
@@ -43,10 +42,12 @@ class Block {
             }
             
             var newLevel = [String]()
+            
             for i in stride(from: 0, to: hashes.count, by: 2) {
                 let combinedHash = hashes[i] + hashes[i + 1]
                 newLevel.append(Blockchain.SHA256(combinedHash))
             }
+            
             hashes = newLevel
         }
         
@@ -57,8 +58,7 @@ class Block {
         let target = String(repeating: "0", count: difficulty)
         
         while !self.hash.hasPrefix(target) {
-            nonce += 1
-            // Recompute the hash with the new nonce
+            nonce += 1 // Recompute the hash with the new nonce
         }
     }
 }
