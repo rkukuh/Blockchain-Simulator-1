@@ -48,4 +48,13 @@ class Block {
         
         return hashes.first ?? ""
     }
+    
+    func mineBlock(difficulty: Int) {
+        let target = String(repeating: "0", count: difficulty)
+        
+        while !self.hash.hasPrefix(target) {
+            nonce += 1
+            // Recompute the hash with the new nonce
+        }
+    }
 }

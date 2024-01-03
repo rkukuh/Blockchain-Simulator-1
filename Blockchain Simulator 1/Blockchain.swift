@@ -26,6 +26,7 @@ class Blockchain {
     
     func addBlock(transactions: [String]) {
         let newBlock = Block(transactions: transactions, previousHash: lastBlock?.hash ?? "")
+        newBlock.mineBlock(difficulty: 2) // Example difficulty
         blocks.append(newBlock)
     }
     
