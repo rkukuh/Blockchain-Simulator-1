@@ -17,7 +17,7 @@ struct ContentView: View {
                 .padding()
             
             Button("Add Transaction") {
-                blockchain.addBlock(transaction: newTransaction)
+                blockchain.addBlock(transactions: [newTransaction])
                 newTransaction = ""
             }
             .padding()
@@ -25,9 +25,22 @@ struct ContentView: View {
             List(blockchain.allBlocks, id: \.hash) { block in
                 VStack(alignment: .leading) {
                     Text("Hash: \(block.hash)")
-                    Text("Transaction: \(block.transaction)")
                     Text("Previous Hash: \(block.previousHash)")
+                    Text("Nonce: \(block.nonce)")
+                    Text("Version: \(block.version)")
+                    Text("Timestamp: \(block.timestamp)")
+                    Text("Difficulty Target: \(block.difficultyTarget)")
+                    Text("Merkle Root: \(block.merkleRoot)")
+                    
+                    if block.transactions.isEmpty {
+                        Text("No transactions")
+                    } else {
+                        ForEach(block.transactions, id: \.self) { transaction in
+                            Text("Transaction: \(transaction)")
+                        }
+                    }
                 }
+                .padding()
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

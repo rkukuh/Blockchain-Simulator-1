@@ -14,13 +14,13 @@ class Blockchain {
         return blocks.last
     }
     
-    // Add a public computed property to access the blocks
+    // Add this computed property to provide access to the blocks
     var allBlocks: [Block] {
         return blocks
     }
     
-    func addBlock(transaction: String) {
-        let newBlock = Block(transaction: transaction, previousHash: lastBlock?.hash ?? "")
+    func addBlock(transactions: [String]) {
+        let newBlock = Block(transactions: transactions, previousHash: lastBlock?.hash ?? "")
         blocks.append(newBlock)
     }
     
