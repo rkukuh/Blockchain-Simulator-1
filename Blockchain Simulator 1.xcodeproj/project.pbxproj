@@ -14,6 +14,8 @@
 		4A0B2D5A2B44F2D7004C5683 /* Blockchain_Simulator_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0B2D592B44F2D7004C5683 /* Blockchain_Simulator_1Tests.swift */; };
 		4A0B2D642B44F2D7004C5683 /* Blockchain_Simulator_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0B2D632B44F2D7004C5683 /* Blockchain_Simulator_1UITests.swift */; };
 		4A0B2D662B44F2D7004C5683 /* Blockchain_Simulator_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0B2D652B44F2D7004C5683 /* Blockchain_Simulator_1UITestsLaunchTests.swift */; };
+		4A0B2D732B44F31C004C5683 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0B2D722B44F31C004C5683 /* Block.swift */; };
+		4A0B2D752B44F350004C5683 /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0B2D742B44F350004C5683 /* Blockchain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		4A0B2D5F2B44F2D7004C5683 /* Blockchain Simulator 1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blockchain Simulator 1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0B2D632B44F2D7004C5683 /* Blockchain_Simulator_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain_Simulator_1UITests.swift; sourceTree = "<group>"; };
 		4A0B2D652B44F2D7004C5683 /* Blockchain_Simulator_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain_Simulator_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4A0B2D722B44F31C004C5683 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		4A0B2D742B44F350004C5683 /* Blockchain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				4A0B2D472B44F2D5004C5683 /* Blockchain_Simulator_1App.swift */,
+				4A0B2D722B44F31C004C5683 /* Block.swift */,
+				4A0B2D742B44F350004C5683 /* Blockchain.swift */,
 				4A0B2D492B44F2D5004C5683 /* ContentView.swift */,
 				4A0B2D4B2B44F2D7004C5683 /* Assets.xcassets */,
 				4A0B2D502B44F2D7004C5683 /* Blockchain_Simulator_1.entitlements */,
@@ -259,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A0B2D732B44F31C004C5683 /* Block.swift in Sources */,
+				4A0B2D752B44F350004C5683 /* Blockchain.swift in Sources */,
 				4A0B2D4A2B44F2D5004C5683 /* ContentView.swift in Sources */,
 				4A0B2D482B44F2D5004C5683 /* Blockchain_Simulator_1App.swift in Sources */,
 			);
