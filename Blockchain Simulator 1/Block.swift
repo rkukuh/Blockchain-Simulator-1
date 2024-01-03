@@ -16,14 +16,9 @@ class Block {
     var timestamp: Int {
         return Int(Date().timeIntervalSince1970)
     }
-    // Method to format the timestamp
     var formattedTimestamp: String {
         let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy/MMM/dd hh:mma"
-        dateFormatter.amSymbol = "AM"
-        dateFormatter.pmSymbol = "PM"
-        return dateFormatter.string(from: date)
+        return date.getFormattedDateAndRelativeDescription()
     }
     var difficultyTarget = 0x1d00ffff
     var nonce: Int = 0
